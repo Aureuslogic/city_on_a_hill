@@ -1,6 +1,7 @@
 [build]
   base = "source"
-  command = "npm ci && npm run build:netlify"
+  command = "npm run build:netlify"
+  publish = "dist"
 
 [build.environment]
-  NODE_VERSION = "22.13.0"
+  NODE_VERSION = "22"
