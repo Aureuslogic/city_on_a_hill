@@ -629,3 +629,20 @@ footer > div:not(.footer-brand):not(.footer-bottom) a { color: rgba(255,255,255,
   .legal-content { padding: 68px 0 85px; }
   .legal-content section { padding: 27px 0; }
 }
+
+/* Keep each community heading and description in the same flexible column. */
+.community-copy li {
+  grid-template-columns: 36px minmax(0, 1fr);
+  column-gap: 18px;
+  align-items: start;
+  padding-block: 20px;
+  font-size: 16px;
+  line-height: 1.72;
+}
+.community-copy li > span { padding-top: 4px; font-size: 12px; }
+.community-copy li > div { min-width: 0; }
+.community-copy li b { display: block; }
+.community-copy li p { margin: 6px 0 0; font: inherit; color: inherit; }
+@media (max-width: 620px) {
+  .community-copy li { grid-template-columns: 28px minmax(0, 1fr); column-gap: 12px; }
+}

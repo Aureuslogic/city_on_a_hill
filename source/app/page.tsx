@@ -253,9 +253,9 @@ export default function Home() {
             specialists who believe faith, excellence and meaningful impact belong together.
           </p>
           <ul>
-            <li><span>01</span><b>Meaningful connections</b> with founders and professionals across sectors</li>
-            <li><span>02</span><b>Founder roundtables</b> for honest thinking, prayer and peer support</li>
-            <li><span>03</span><b>Events and introductions</b> that turn shared values into real opportunity</li>
+              <li><span>01</span><div><b>Meaningful connections</b><p>with founders and professionals across sectors</p></div></li>
+              <li><span>02</span><div><b>Founder roundtables</b><p>for honest thinking, prayer and peer support</p></div></li>
+              <li><span>03</span><div><b>Events and introductions</b><p>that turn shared values into real opportunity</p></div></li>
           </ul>
           <a className="button button-gold" href="mailto:info@cityonthehillglobal.com?subject=Join the City on the Hill ecosystem">Join our Ecosystem</a>
         </div>
