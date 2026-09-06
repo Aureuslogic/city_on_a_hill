@@ -78,7 +78,7 @@ export const ecosystemEvents: EcosystemEvent[] = [
     market: 'Kenya',
     format: 'Hybrid',
     focus: 'Young professionals',
-    audience: 'Christian professionals and entrepreneurs aged 21–35',
+    audience: 'Christian professionals and entrepreneurs aged 21-35',
     summary: 'An energetic development experience connecting young talent with mentors, practical tools and an international peer network.',
     image: '/directory/young-diverse-leaders.png',
   },

@@ -87,8 +87,8 @@ export default function DirectoryClient() {
     });
 
     return matching.sort((a, b) => {
-      if (sort === 'Name A–Z') return a.name.localeCompare(b.name);
-      if (sort === 'Country A–Z') return a.market.localeCompare(b.market);
+      if (sort === 'Name A-Z') return a.name.localeCompare(b.name);
+      if (sort === 'Country A-Z') return a.market.localeCompare(b.market);
       return Number(b.featured) - Number(a.featured) || a.name.localeCompare(b.name);
     });
   }, [category, city, delivery, language, market, profileType, query, sort, trust]);
@@ -195,8 +195,8 @@ export default function DirectoryClient() {
             <span className="sr-only">Sort directory profiles</span>
             <select value={sort} onChange={(event) => setSort(event.target.value)}>
               <option>Recommended</option>
-              <option>Name A–Z</option>
-              <option>Country A–Z</option>
+              <option>Name A-Z</option>
+              <option>Country A-Z</option>
             </select>
           </label>
           {hasFilters && <button type="button" onClick={resetFilters}>Clear filters</button>}
@@ -209,7 +209,7 @@ export default function DirectoryClient() {
             <article className="business-card business-card-marketplace" data-accent={business.accent} key={business.slug}>
               <a className="business-card-media" href={`/business/${business.slug}`} aria-label={`View ${business.name}`}>
                 {business.media.src ? (
-                  <img src={business.media.src} alt={`${business.name} — ${business.media.label}`} />
+                  <img src={business.media.src} alt={`${business.name}: ${business.media.label}`} />
                 ) : (
                   <span aria-hidden="true">{business.media.kind === 'video' ? '▶' : '✦'}</span>
                 )}

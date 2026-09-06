@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     type: 'website',
     url: '/',
     siteName: 'City on the Hill',
-    images: [{ url: '/og.png', width: 1731, height: 909, alt: 'City on the Hill — Find trusted Christian businesses. Build what matters.' }],
+    images: [{ url: '/og.png', width: 1731, height: 909, alt: 'City on the Hill: Find trusted Christian businesses. Build what matters.' }],
   },
   twitter: {
     card: 'summary_large_image',

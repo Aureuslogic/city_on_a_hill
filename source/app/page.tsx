@@ -143,7 +143,7 @@ export default function Home() {
             </h1>
             <p className="hero-intro">
               City on the Hill connects customers and organisations with excellent Christian-owned
-              businesses—and gives faith-driven founders the visibility, relationships and practical
+              businesses, and gives faith-driven founders the visibility, relationships and practical
               support to grow with purpose.
             </p>
             <div className="hero-actions">
@@ -215,7 +215,7 @@ export default function Home() {
             <p>
               Search one growing international directory for values-led businesses, specialist expertise and
               professional services. City on the Hill makes Christian-owned companies easier to find,
-              understand and contact—whether you are buying for yourself, your church or your organisation.
+              understand and contact, whether you are buying for yourself, your church or your organisation.
             </p>
             <a className="arrow-link" href="/directory">Browse every category <span>→</span></a>
           </div>
@@ -269,7 +269,7 @@ export default function Home() {
               <h2 id="people-heading">A community as varied as its calling.</h2>
             </div>
             <p>
-              This is more than a business directory. It is a place to meet exceptional Christians—
+              This is more than a business directory. It is a place to meet exceptional Christians:
               visionaries and practitioners using their influence, experience and resources to serve
               people, transform industries and advance the Kingdom.
             </p>
@@ -298,13 +298,13 @@ export default function Home() {
           </div>
           <p>
             Get found by the right people, strengthen the business behind your profile and prepare for
-            bigger opportunities—with practical, values-led support for every stage of growth.
+            bigger opportunities, with practical, values-led support for every stage of growth.
           </p>
         </div>
         <div className="growth-grid">
           <article className="growth-feature growth-feature-main">
             <span>Visibility</span>
-            <h3>Be easier to discover—and easier to trust.</h3>
+            <h3>Be easier to discover, and easier to trust.</h3>
             <p>
               Present your offer clearly through a verified profile built for customer searches,
               supplier discovery and meaningful referrals.

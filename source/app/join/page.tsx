@@ -90,7 +90,7 @@ export default function JoinPage() {
 
       <section className="join-main" id="pathways" aria-labelledby="join-heading">
         <div className="directory-heading">
-          <div><p className="kicker">Membership and visibility</p><h2 id="join-heading">A clear place to begin—and room to grow</h2></div>
+          <div><p className="kicker">Membership and visibility</p><h2 id="join-heading">A clear place to begin, and room to grow</h2></div>
           <p>Start with a strong profile, add verification when ready and explore deeper partnership as your role in the ecosystem grows.</p>
         </div>
         <div className="join-tier-grid">

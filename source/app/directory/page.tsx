@@ -67,7 +67,7 @@ export default function DirectoryPage() {
           <p className="kicker kicker-light">For Christian business owners</p>
           <h2>Give your business a window in the city.</h2>
           <p>
-            Present your work with a dedicated, shareable page—then send interested customers directly
+            Present your work with a dedicated, shareable page, then send interested customers directly
             to your website, shop or booking journey.
           </p>
         </div>

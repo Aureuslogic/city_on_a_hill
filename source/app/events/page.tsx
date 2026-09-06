@@ -43,7 +43,7 @@ export default function EventsPage() {
           <h1>Gather with purpose.<br /><em>Build relationships that travel.</em></h1>
           <p>
             Explore the event formats City on the Hill is building for founders, professionals, investors,
-            creatives and emerging leaders—locally, internationally and online.
+            creatives and emerging leaders, locally, internationally and online.
           </p>
           <div className="directory-capacity" aria-label="Event programme features">
             <span><b>03</b> gathering formats</span>
