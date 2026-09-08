@@ -31,6 +31,13 @@ export const metadata: Metadata = {
     'Christian investor network',
     'Christian entrepreneur community',
   ],
+  icons: {
+    icon: [
+      { url: '/favicon-32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon.jpg', type: 'image/jpeg' },
+    ],
+    apple: [{ url: '/apple-icon.png', sizes: '180x180', type: 'image/png' }],
+  },
   alternates: { canonical: '/' },
   robots: { index: true, follow: true },
   openGraph: {

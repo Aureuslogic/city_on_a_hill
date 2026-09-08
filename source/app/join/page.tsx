@@ -15,20 +15,11 @@ export const metadata: Metadata = {
 
 const pathways = [
   {
-    label: 'Founding profile',
-    name: 'Community listing',
-    price: 'Free',
-    description: 'A clear entry point for approved businesses and professionals joining the growing directory.',
-    features: ['Shareable directory profile', 'Business or professional category', 'Country and city discovery', 'Direct website link'],
-    cta: 'Apply for a free profile',
-    subject: 'Community listing application',
-  },
-  {
     label: 'Trust and visibility',
     name: 'Verified profile',
     price: 'By application',
     description: 'A stronger trust layer for established organisations ready to provide evidence and complete review.',
-    features: ['Everything in Community listing', 'Verification review and trust badge', 'Expanded media and benefit sections', 'Eligibility for selected introductions'],
+    features: ['Shareable directory profile', 'Verification review and trust badge', 'Expanded media and benefit sections', 'Eligibility for selected introductions'],
     cta: 'Apply for verification',
     subject: 'Verified profile application',
     featured: true,
@@ -48,10 +39,6 @@ const joinFaqs = [
   {
     q: 'Who can join City on the Hill?',
     a: 'Christian-owned businesses, faith-driven professionals, communities, educators, investors and aligned partner organisations can apply. Every application is reviewed for relevance, clarity and fit with the ecosystem’s values and purpose.',
-  },
-  {
-    q: 'Is there a free business listing?',
-    a: 'Yes. The founding Community listing gives approved applicants a shareable profile, category placement, country and city discovery, and a direct link to their own website. Verification and featured partnership pathways add stronger trust and visibility options.',
   },
   {
     q: 'How does business verification work?',
@@ -91,7 +78,7 @@ export default function JoinPage() {
       <section className="join-main" id="pathways" aria-labelledby="join-heading">
         <div className="directory-heading">
           <div><p className="kicker">Membership and visibility</p><h2 id="join-heading">A clear place to begin, and room to grow</h2></div>
-          <p>Start with a strong profile, add verification when ready and explore deeper partnership as your role in the ecosystem grows.</p>
+          <p>Apply for a verified profile, then explore deeper partnership as your role in the ecosystem grows.</p>
         </div>
         <div className="join-tier-grid">
           {pathways.map((pathway) => (
