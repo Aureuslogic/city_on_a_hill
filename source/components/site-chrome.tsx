@@ -1,10 +1,11 @@
+import { BrandLogo } from './brand-logo';
+
 export function SiteHeader() {
   return (
     <header className="inner-header">
       <nav className="site-nav inner-site-nav" aria-label="Main navigation">
         <a className="brand" href="/" aria-label="City on the Hill home">
-          <span className="brand-mark" aria-hidden="true"><i /><b /></span>
-          <span className="brand-name"><strong>CITY</strong><small>ON THE HILL</small></span>
+          <BrandLogo />
         </a>
         <div className="nav-links">
           <a href="/directory">Discover</a>
@@ -27,11 +28,11 @@ export function SiteHeader() {
 export function MobileDock() {
   return (
     <nav className="mobile-dock" aria-label="Mobile navigation">
-      <a href="/"><span aria-hidden="true">⌂</span><b>Home</b></a>
-      <a href="/directory"><span aria-hidden="true">⌕</span><b>Discover</b></a>
-      <a href="/events"><span aria-hidden="true">◇</span><b>Events</b></a>
-      <a href="/join"><span aria-hidden="true">＋</span><b>Join</b></a>
-      <a href="/#community"><span aria-hidden="true">•••</span><b>More</b></a>
+      <a href="/"><span aria-hidden="true">âŒ‚</span><b>Home</b></a>
+      <a href="/directory"><span aria-hidden="true">âŒ•</span><b>Discover</b></a>
+      <a href="/events"><span aria-hidden="true">â—‡</span><b>Events</b></a>
+      <a href="/join"><span aria-hidden="true">ï¼‹</span><b>Join</b></a>
+      <a href="/#community"><span aria-hidden="true">â€¢â€¢â€¢</span><b>More</b></a>
     </nav>
   );
 }
@@ -41,8 +42,7 @@ export function SiteFooter() {
     <footer>
       <div className="footer-brand">
         <a className="brand" href="/" aria-label="City on the Hill home">
-          <span className="brand-mark" aria-hidden="true"><i /><b /></span>
-          <span className="brand-name"><strong>CITY</strong><small>ON THE HILL</small></span>
+          <BrandLogo />
         </a>
         <p>City on the Hill is a global ecosystem for people learning, networking and building with purpose.</p>
       </div>
@@ -67,11 +67,10 @@ export function SiteFooter() {
         <a href="/data-protection">Data protection policy</a>
       </div>
       <div className="footer-bottom">
-        <span>© 2026 City on the Hill</span>
+        <span>Â© 2026 City on the Hill</span>
         <a href="mailto:info@cityonthehillglobal.com">info@cityonthehillglobal.com</a>
         <span>Matthew 5:14</span>
       </div>
     </footer>
   );
 }
-

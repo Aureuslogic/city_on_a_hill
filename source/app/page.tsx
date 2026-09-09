@@ -1,4 +1,5 @@
 import { priorityMarkets } from '../lib/businesses';
+import { BrandLogo } from '../components/brand-logo';
 import { MobileDock } from '../components/site-chrome';
 
 const directoryCategories = [
@@ -114,14 +115,7 @@ export default function Home() {
       <section className="hero-shell">
         <nav className="site-nav" aria-label="Main navigation">
           <a className="brand" href="#top" aria-label="City on the Hill home">
-            <span className="brand-mark" aria-hidden="true">
-              <i />
-              <b />
-            </span>
-            <span className="brand-name">
-              <strong>CITY</strong>
-              <small>ON THE HILL</small>
-            </span>
+            <BrandLogo />
           </a>
           <div className="nav-links">
             <a href="/directory">Discover</a>
@@ -397,8 +391,7 @@ export default function Home() {
       <footer>
         <div className="footer-brand">
           <a className="brand" href="#top" aria-label="City on the Hill home">
-            <span className="brand-mark" aria-hidden="true"><i /><b /></span>
-            <span className="brand-name"><strong>CITY</strong><small>ON THE HILL</small></span>
+            <BrandLogo />
           </a>
           <p>City on the Hill is a global ecosystem for people learning, networking and building with purpose.</p>
         </div>

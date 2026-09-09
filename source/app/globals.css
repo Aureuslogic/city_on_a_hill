@@ -36,12 +36,15 @@ button, input { font: inherit; }
 
 .site-nav { position: relative; z-index: 2; width: min(1180px, calc(100% - 48px)); height: 92px; margin: 0 auto; display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 42px; border-bottom: 1px solid rgba(255, 255, 255, 0.16); }
 .brand { display: flex; align-items: center; gap: 10px; }
-.brand-mark { position: relative; display: block; width: 38px; height: 38px; }
-.brand-mark i, .brand-mark b { position: absolute; display: block; background: var(--gold); border-radius: 2px; }
-.brand-mark i { width: 9px; height: 30px; left: 15px; top: 1px; }
-.brand-mark b { width: 27px; height: 9px; left: 6px; top: 9px; }
-.brand-mark::after { content: ''; position: absolute; width: 36px; height: 8px; left: 1px; bottom: 0; border-bottom: 2px solid white; border-radius: 50%; }
-.brand-name { display: grid; line-height: 1; }
+.brand-logo {
+  display: block;
+  width: auto;
+  height: 48px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: white;
+}
+.brand-name { display: none; }
 .brand-name strong { font-size: 17px; letter-spacing: .08em; }
 .brand-name small { margin-top: 5px; font-size: 7px; letter-spacing: .28em; }
 .nav-links { display: flex; justify-content: flex-end; align-items: center; gap: 28px; }
@@ -257,7 +260,7 @@ footer > div:not(.footer-brand):not(.footer-bottom) a { color: rgba(255,255,255,
   .site-nav, .hero-grid { width: min(100% - 30px, 1180px); }
   .site-nav { height: 78px; }
   .nav-cta { min-height: 41px; padding: 0 14px; font-size: 12px; }
-  .brand-name { display: none; }
+  .brand-logo { height: 40px; }
   .hero-grid { padding: 54px 0 72px; gap: 42px; }
   h1 { font-size: clamp(44px, 13.2vw, 62px); }
   .hero-intro { font-size: 16px; line-height: 1.6; }
