@@ -365,7 +365,7 @@ export const businesses: Business[] = [
     featured: true,
     isDemo: true,
     accent: 'navy',
-    media: { kind: 'image', label: 'Global finance professionals', src: '/directory/market-professionals.png' },
+    media: { kind: 'video', label: 'Covenant Capital Network video', src: 'https://www.youtube.com/shorts/CWf4JAVBLPk' },
   },
 ];
 
@@ -375,6 +375,30 @@ export function getBusinessProfileType(business: Business): BusinessProfileType 
 
 export function getBusiness(slug: string) {
   return businesses.find((business) => business.slug === slug);
+}
+
+function getYoutubeVideoId(src?: string) {
+  if (!src) return undefined;
+  return src.match(/(?:embed\/|shorts\/|watch\?v=|youtu\.be\/)([a-zA-Z0-9_-]{11})/)?.[1];
+}
+
+export function getBusinessMediaPreview(business: Business) {
+  const src = business.media.src;
+  if (!src) return undefined;
+  if (business.media.kind === 'video') {
+    const id = getYoutubeVideoId(src);
+    if (id) return `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
+  }
+  return src;
+}
+
+export function getBusinessVideoHref(business: Business) {
+  const src = business.media.src;
+  if (!src) return undefined;
+  const id = getYoutubeVideoId(src);
+  if (id && src.includes('/shorts/')) return `https://www.youtube.com/shorts/${id}`;
+  if (id) return `https://www.youtube.com/watch?v=${id}`;
+  return src;
 }
 
 export const businessLocations = [...new Set(businesses.map((business) => business.location))].sort();

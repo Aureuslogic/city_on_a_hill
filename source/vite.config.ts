@@ -66,7 +66,13 @@ export default defineConfig(async () => {
       : { css: { postcss: { plugins: [tailwindcssPostcss()] } } }),
     server: {
       host: '127.0.0.1',
-      port: 3000,
+      port: Number(process.env.PORT || 3001),
+      strictPort: true,
+      hmr: {
+        overlay: false,
+        host: '127.0.0.1',
+        port: Number(process.env.PORT || 3001),
+      },
       ...(isCodexSeatbeltSandbox
         ? { watch: { useFsEvents: false, usePolling: true } }
         : {}),

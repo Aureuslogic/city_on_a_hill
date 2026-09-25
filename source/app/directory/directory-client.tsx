@@ -7,6 +7,7 @@ import {
   businessMarkets,
   businessProfileTypes,
   businesses,
+  getBusinessMediaPreview,
   getBusinessProfileType,
 } from '../../lib/businesses';
 
@@ -208,8 +209,8 @@ export default function DirectoryClient() {
           {filteredBusinesses.map((business) => (
             <article className="business-card business-card-marketplace" data-accent={business.accent} key={business.slug}>
               <a className="business-card-media" href={`/business/${business.slug}`} aria-label={`View ${business.name}`}>
-                {business.media.src ? (
-                  <img src={business.media.src} alt={`${business.name}: ${business.media.label}`} />
+                {getBusinessMediaPreview(business) ? (
+                  <img src={getBusinessMediaPreview(business)} alt={`${business.name}: ${business.media.label}`} />
                 ) : (
                   <span aria-hidden="true">{business.media.kind === 'video' ? '▶' : '✦'}</span>
                 )}

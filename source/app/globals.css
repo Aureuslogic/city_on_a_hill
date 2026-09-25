@@ -391,7 +391,36 @@ footer > div:not(.footer-brand):not(.footer-bottom) a { color: rgba(255,255,255,
 .profile-actions { display: flex; align-items: center; gap: 28px; margin-top: 32px; }
 .profile-actions .button span { margin-left: 8px; }
 .profile-media { position: relative; aspect-ratio: 4 / 3; overflow: hidden; border: 1px solid rgba(255,255,255,.22); border-radius: 28px; background: rgba(255,255,255,.07); box-shadow: 0 32px 80px rgba(0,0,0,.33); }
+.profile-media[data-kind='video'] { aspect-ratio: 16 / 9; }
 .profile-media img, .profile-media iframe { width: 100%; height: 100%; border: 0; object-fit: cover; }
+.profile-media-link { position: absolute; inset: 0; display: block; color: inherit; }
+.profile-media-play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 76px;
+  height: 76px;
+  display: grid;
+  place-items: center;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: var(--gold);
+  color: #16303a;
+  font-size: 22px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, .28);
+}
+.profile-media-watch {
+  position: absolute;
+  left: 22px;
+  bottom: 20px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(7, 31, 43, .72);
+  color: white;
+  font-size: 12px;
+  font-weight: 800;
+}
+.profile-media-link:hover .profile-media-play { transform: translate(-50%, -50%) scale(1.06); }
 .profile-media-placeholder { height: 100%; display: grid; place-content: center; justify-items: center; padding: 40px; text-align: center; background: radial-gradient(circle at 60% 30%, rgba(255,255,255,.13), transparent 24%), repeating-linear-gradient(135deg, rgba(255,255,255,.025) 0 1px, transparent 1px 18px); }
 .profile-media-placeholder > span { width: 76px; height: 76px; display: grid; place-items: center; border: 1px solid rgba(255,255,255,.45); border-radius: 50%; font-size: 24px; }
 .profile-media-placeholder p { margin: 28px 0 8px; font: 500 21px/1.3 Georgia, serif; }

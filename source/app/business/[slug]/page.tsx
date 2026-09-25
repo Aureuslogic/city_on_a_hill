@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { SiteFooter, SiteHeader } from '../../../components/site-chrome';
-import { businesses, getBusiness, getBusinessProfileType } from '../../../lib/businesses';
+import { businesses, getBusiness, getBusinessMediaPreview, getBusinessProfileType, getBusinessVideoHref } from '../../../lib/businesses';
 
 type BusinessPageProps = {
   params: Promise<{ slug: string }>;
@@ -113,12 +113,17 @@ export default async function BusinessPage({ params }: BusinessPageProps) {
               {business.media.src && business.media.kind === 'image' ? (
                 <img src={business.media.src} alt={`${business.name} showcase`} />
               ) : business.media.src && business.media.kind === 'video' ? (
-                <iframe
-                  src={business.media.src}
-                  title={`${business.name} video`}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                />
+                <a
+                  className="profile-media-link"
+                  href={getBusinessVideoHref(business)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Watch ${business.name} on YouTube`}
+                >
+                  <img src={getBusinessMediaPreview(business)} alt={`${business.name} video`} />
+                  <span className="profile-media-play" aria-hidden="true">▶</span>
+                  <span className="profile-media-watch">Watch on YouTube</span>
+                </a>
               ) : (
                 <div className="profile-media-placeholder">
                   <span aria-hidden="true">{business.media.kind === 'video' ? '▶' : '✦'}</span>
