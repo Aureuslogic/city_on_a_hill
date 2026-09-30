@@ -39,6 +39,8 @@ e_example,E Kingdom alignment,"If you have a recent example, please share it.",t
 f_public_liability,F Policies and cover,Do you have public liability insurance?,radio,Yes,Yes | No | In progress | Not applicable,Not in tracker yet
 f_gdpr_policy,F Policies and cover,Do you have a written GDPR (data protection) policy or privacy notice?,radio,Yes,Yes | No | In progress,Not in tracker yet
 f_refund_policy,F Policies and cover,Do you have a written refund policy for customers?,radio,Yes,Yes | No | In progress | Not applicable,Not in tracker yet
+f_ico_registered,F Policies and cover,Is your business ICO registered?,radio,Yes,Yes | No,Not in tracker yet
+f_industry_standards,F Policies and cover,Are you registered and compliant/accredited with your industry standards?,radio,Yes,Yes | No,Not in tracker yet
 f_notes,F Policies and cover,Anything you would like to add about these?,text,No,,Not in tracker yet
 consent_contact,Declaration,"I agree to City on a Hill storing my name, email and phone number to assess this application and contact me about it.",checkbox,Yes,Agreed,Stored with submission
 declaration_accurate,Declaration,The information I have given is accurate and complete to the best of my knowledge.,checkbox,Yes,Confirmed,Stored with submission
