@@ -1,0 +1,44 @@
+﻿Field name (as submitted),Section,Question shown to applicant,Input type,Required,Allowed values or validation,Tracker column
+full_name,Your details,Full name,text,Yes,,Contact
+role,Your details,Your role in the business,text,Yes,,Role
+email,Your details,Email address,email,Yes,Valid email,Stored with submission
+phone,Your details,Phone number,tel,Yes,"Pattern: ^\+?[0-9 ()]{10,20}$",Stored with submission
+business_name,Your details,Registered business name,text,Yes,,Business name
+trading_name,Your details,"Trading name, if different",text,No,,Stored with submission
+registration_number,Your details,Company or charity number,text,No,,A1
+website,Your details,Website or public business page,text,Yes,,A4
+a_owner,A Your business,Who owns the business?,text,Yes,,A1
+a_trading_since,A Your business,When did you start trading?,text,Yes,,A2
+a_customers_12m,A Your business,How many paying customers have you served in the last 12 months?,radio,Yes,None yet | 1 to 10 | 11 to 50 | 51 to 250 | Over 250,A2
+a_recent_customers,A Your business,"Tell us about your three most recent customers. What did they buy, and how did they pay?",textarea,Yes,,A3
+b_turnover_band,B Turnover,Which band was your turnover in the last full 12 months?,radio,Yes,Under £50k | £50k to £250k | £250k to £1m | £1m to £5m | Over £5m,B1 Turnover band
+b_repeat_share,B Turnover,Share of revenue from repeat customers,select,Yes,Under 25% | 25% to 50% | 50% to 75% | Over 75% | Not sure,B2
+b_accounts_by,B Turnover,Who prepares your accounts?,select,Yes,An accountant | A bookkeeper | I do | No one yet,B3
+b_filings_current,B Turnover,"Are your company, tax and statutory filings up to date?",select,Yes,Yes | No | Not yet due,B3
+c_other_decision_makers,C Leadership,"Apart from you, who makes decisions in the business?",textarea,Yes,,C1
+c_runs_without_you,C Leadership,"If you were away for two weeks, what would keep running, and who would run it?",textarea,Yes,,C2
+c_owner_sales,C Leadership,Who owns sales?,radio,Yes,Me | Team member | Outsourced | No one yet,C3
+c_owner_delivery,C Leadership,Who owns delivery?,radio,Yes,Me | Team member | Outsourced | No one yet,C3
+c_owner_finance,C Leadership,Who owns finance?,radio,Yes,Me | Team member | Outsourced | No one yet,C3
+c_meeting_rhythm,C Leadership,How often does your leadership team meet?,select,Yes,Weekly | Fortnightly | Monthly | Rarely | We do not meet,C4
+c_last_decision,C Leadership,What did you decide at your last meeting?,text,No,,C4
+d_12_month_target,D Growth,Where do you want the business to be in 12 months? Please use numbers.,textarea,Yes,,D1
+d_invested_new_hire,D Growth,Invested in growth: a new hire,checkbox,No,Yes,D2
+d_invested_marketing,D Growth,Invested in growth: marketing spend,checkbox,No,Yes,D2
+d_invested_system,D Growth,Invested in growth: a new system or software,checkbox,No,Yes,D2
+d_invested_training,D Growth,Invested in growth: training or coaching,checkbox,No,Yes,D2
+d_invested_nothing,D Growth,Invested in growth: nothing yet,checkbox,No,Yes,D2
+d_main_constraint,D Growth,What is the main thing stopping you getting there today?,textarea,Yes,,D3
+d_cost_of_no_change,D Growth,What happens if nothing changes in the next 12 months?,textarea,Yes,,D4
+d_start_when,D Growth,"If you found the right support, when would you start?",select,Yes,Within 30 days | Within 3 months | Within 6 months | Not sure yet,D5
+d_who_must_agree,D Growth,Who else would need to agree?,text,Yes,,D5
+e_christian_led,E Kingdom alignment,Are you a Christian-led business?,radio,Yes,Yes | No,E1 Christian-led
+e_christian_leader,E Kingdom alignment,"If yes, who is that leader, and what is their role?",text,No,,E1
+e_adds_value_to_christian_businesses,E Kingdom alignment,Are you mindful to meet and add value to other Christian businesses?,radio,Yes,"Yes, with a recent example | Yes, no example yet | Not currently a priority",E2
+e_example,E Kingdom alignment,"If you have a recent example, please share it.",textarea,No,,E2
+f_public_liability,F Policies and cover,Do you have public liability insurance?,radio,Yes,Yes | No | In progress | Not applicable,Not in tracker yet
+f_gdpr_policy,F Policies and cover,Do you have a written GDPR (data protection) policy or privacy notice?,radio,Yes,Yes | No | In progress,Not in tracker yet
+f_refund_policy,F Policies and cover,Do you have a written refund policy for customers?,radio,Yes,Yes | No | In progress | Not applicable,Not in tracker yet
+f_notes,F Policies and cover,Anything you would like to add about these?,text,No,,Not in tracker yet
+consent_contact,Declaration,"I agree to City on a Hill storing my name, email and phone number to assess this application and contact me about it.",checkbox,Yes,Agreed,Stored with submission
+declaration_accurate,Declaration,The information I have given is accurate and complete to the best of my knowledge.,checkbox,Yes,Confirmed,Stored with submission

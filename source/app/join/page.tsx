@@ -13,7 +13,17 @@ export const metadata: Metadata = {
   },
 };
 
-const pathways = [
+const pathways: Array<{
+  label: string;
+  name: string;
+  price: string;
+  description: string;
+  features: string[];
+  cta: string;
+  subject?: string;
+  href?: string;
+  featured?: boolean;
+}> = [
   {
     label: 'Trust and visibility',
     name: 'Verified profile',
@@ -32,6 +42,15 @@ const pathways = [
     features: ['Everything in Verified profile', 'Featured marketplace placement', 'Event and programme collaboration', 'Priority ecosystem introductions'],
     cta: 'Discuss partnership',
     subject: 'Featured partner enquiry',
+  },
+  {
+    label: 'Growth support',
+    name: 'Growth Partner',
+    price: 'By application',
+    description: 'For established, Christian-led businesses ready to grow with structured support from City on a Hill.',
+    features: ['Personal application review', 'Qualification against growth criteria', 'Direct contact from the City on a Hill team', 'Pathway into deeper partnership'],
+    cta: 'Apply as a Growth Partner',
+    href: '/apply/',
   },
 ];
 
@@ -88,7 +107,13 @@ export default function JoinPage() {
               <p className="join-price">{pathway.price}</p>
               <p>{pathway.description}</p>
               <ul>{pathway.features.map((feature) => <li key={feature}>✓ {feature}</li>)}</ul>
-              <a className={pathway.featured ? 'button button-gold' : 'button button-outline'} href={`mailto:info@cityonthehillglobal.com?subject=${encodeURIComponent(pathway.subject)}`}>
+              <a
+                className={pathway.featured ? 'button button-gold' : 'button button-outline'}
+                href={
+                  pathway.href
+                    ?? `mailto:info@cityonthehillglobal.com?subject=${encodeURIComponent(pathway.subject ?? '')}`
+                }
+              >
                 {pathway.cta}
               </a>
             </article>

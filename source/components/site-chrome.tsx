@@ -56,6 +56,7 @@ export function SiteFooter() {
       <div>
         <h3>Connect</h3>
         <a href="/join">Join the ecosystem</a>
+        <a href="/apply/">Growth Partner application</a>
         <a href="mailto:info@cityonthehillglobal.com">Email us</a>
         <a href="https://www.linkedin.com/company/dominion-mandate/about/">LinkedIn</a>
         <a href="https://www.instagram.com/dominion__mandate/">Instagram</a>

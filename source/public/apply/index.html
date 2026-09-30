@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Growth Partner application | City on a Hill</title>
+<meta name="description" content="Apply to become a City on a Hill Growth Partner.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--night:#16213A;--navy:#1F2A44;--gold:#C9A24B;--lamp:#E7C66E;--paper:#FBFAF7;--ink:#1C2233;--muted:#5B6275;--line:#DCD8CE;--err:#A3302A}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 "Source Sans 3",Arial,sans-serif}
+header{background:var(--night);color:#EDE6D3;padding:56px 24px 0;overflow:hidden}
+.wrap{max-width:44rem;margin:0 auto}
+h1{font:600 clamp(2.4rem,6vw,3.6rem)/1.05 "Cormorant Garamond",Georgia,serif;color:#fff;margin:0 0 16px;letter-spacing:-.01em}
+header p{max-width:36rem;margin:0 0 8px;color:#CFC8B6}
+.hill{display:block;width:100%;height:120px;margin-top:28px}
+.hill .glow{animation:glow 2.4s ease-out 1 both}
+@keyframes glow{from{opacity:0;r:2}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.hill .glow{animation:none}}
+main{padding:40px 24px 80px}
+fieldset{border:0;margin:0 0 48px;padding:0}
+legend{display:flex;gap:14px;align-items:baseline;padding:0;margin-bottom:6px;font:600 1.9rem/1.2 "Cormorant Garamond",Georgia,serif;color:var(--navy)}
+legend span{font:600 1rem "Source Sans 3",sans-serif;color:var(--gold);min-width:1.4rem}
+.intro{color:var(--muted);margin:0 0 20px;border-bottom:1px solid var(--line);padding-bottom:14px}
+.q{margin:0 0 22px}
+.q>label,.q>.label{display:block;font-weight:600;margin-bottom:6px}
+.hint{display:block;font-weight:400;color:var(--muted);font-size:.92rem;margin-top:2px}
+input[type=text],input[type=email],input[type=tel],input[type=url],textarea,select{width:100%;padding:12px 14px;font:inherit;color:var(--ink);background:#fff;border:1px solid #C9C4B7;border-radius:6px}
+textarea{min-height:104px;resize:vertical}
+input:focus,textarea:focus,select:focus{outline:3px solid rgba(201,162,75,.45);outline-offset:1px;border-color:var(--gold)}
+.opts{display:grid;gap:8px}
+.opts label{display:flex;gap:10px;align-items:flex-start;padding:10px 12px;border:1px solid var(--line);border-radius:6px;background:#fff;cursor:pointer;font-weight:400}
+.opts label:has(input:checked){border-color:var(--navy);box-shadow:inset 3px 0 0 var(--gold)}
+.opts input{margin-top:5px;accent-color:var(--navy)}
+.two{display:grid;gap:0 18px;grid-template-columns:1fr 1fr}
+@media(max-width:600px){.two{grid-template-columns:1fr}}
+table{width:100%;border-collapse:collapse;background:#fff;font-size:.95rem}
+th,td{border:1px solid var(--line);padding:8px;text-align:center}
+th:first-child,td:first-child{text-align:left;font-weight:600}
+.grid-wrap{overflow-x:auto}
+.consent{background:#fff;border:1px solid var(--line);border-left:3px solid var(--gold);padding:14px 16px;border-radius:6px}
+button{font:600 1.05rem "Source Sans 3",sans-serif;background:var(--navy);color:#fff;border:0;border-radius:6px;padding:15px 30px;cursor:pointer}
+button:hover{background:#2B3960}
+button:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.req{color:var(--err)}
+.hidden{position:absolute;left:-9999px}
+footer{color:var(--muted);font-size:.85rem;margin-top:28px}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <p style="margin:0 0 12px"><a href="/" style="color:#D4AF5A;text-decoration:none;font-weight:600">← City on a Hill</a></p>
+    <h1>Apply to become a Growth Partner</h1>
+    <p>We partner with established, Christian-led businesses that are ready to grow. This takes about 15 minutes. There is nothing to upload.</p>
+  </div>
+  <svg class="hill" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 120 C300 120 420 34 600 34 C780 34 900 120 1200 120 Z" fill="#1F2A44"/>
+    <path d="M0 120 C300 120 420 34 600 34 C780 34 900 120 1200 120" fill="none" stroke="#C9A24B" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
+    <circle class="glow" cx="600" cy="22" r="6" fill="#E7C66E"/>
+  </svg>
+</header>
+
+<main>
+<form class="wrap" name="growth-partner-application" method="POST" action="/apply/thanks.html" data-netlify="true" netlify-honeypot="bot-field">
+<input type="hidden" name="form-name" value="growth-partner-application">
+<p class="hidden"><label>Leave this empty <input name="bot-field"></label></p>
+
+<fieldset>
+  <legend>Your details</legend>
+  <p class="intro">Fields marked <span class="req">*</span> are required.</p>
+  <div class="two">
+    <div class="q"><label for="name">Full name <span class="req">*</span></label><input id="name" name="full_name" type="text" autocomplete="name" required></div>
+    <div class="q"><label for="role">Your role in the business <span class="req">*</span></label><input id="role" name="role" type="text" autocomplete="organization-title" required></div>
+    <div class="q"><label for="email">Email address <span class="req">*</span></label><input id="email" name="email" type="email" autocomplete="email" required></div>
+    <div class="q"><label for="phone">Phone number <span class="req">*</span><span class="hint">Include your country code if outside the UK.</span></label><input id="phone" name="phone" type="tel" autocomplete="tel" pattern="^\+?[0-9 ()]{10,20}$" title="10 to 15 digits, spaces and + allowed" required></div>
+    <div class="q"><label for="biz">Registered business name <span class="req">*</span></label><input id="biz" name="business_name" type="text" autocomplete="organization" required></div>
+    <div class="q"><label for="trading">Trading name, if different</label><input id="trading" name="trading_name" type="text"></div>
+    <div class="q"><label for="reg">Company or charity number<span class="hint">Leave blank if you are a sole trader.</span></label><input id="reg" name="registration_number" type="text"></div>
+    <div class="q"><label for="web">Website or public business page <span class="req">*</span></label><input id="web" name="website" type="text" placeholder="www.example.co.uk" required></div>
+  </div>
+</fieldset>
+
+<fieldset>
+  <legend><span>A</span>Your business</legend>
+  <div class="two">
+    <div class="q"><label for="owner">Who owns the business? <span class="req">*</span></label><input id="owner" name="a_owner" type="text" required></div>
+    <div class="q"><label for="since">When did you start trading? <span class="req">*</span><span class="hint">For example, March 2021.</span></label><input id="since" name="a_trading_since" type="text" required></div>
+  </div>
+  <div class="q"><span class="label">How many paying customers have you served in the last 12 months? <span class="req">*</span></span>
+    <div class="opts">
+      <label><input type="radio" name="a_customers_12m" value="None yet" required>None yet</label>
+      <label><input type="radio" name="a_customers_12m" value="1 to 10">1 to 10</label>
+      <label><input type="radio" name="a_customers_12m" value="11 to 50">11 to 50</label>
+      <label><input type="radio" name="a_customers_12m" value="51 to 250">51 to 250</label>
+      <label><input type="radio" name="a_customers_12m" value="Over 250">Over 250</label>
+    </div></div>
+  <div class="q"><label for="recent">Tell us about your three most recent customers. What did they buy, and how did they pay? <span class="req">*</span><span class="hint">No names needed. For example: a local school, a website build, paid by invoice.</span></label><textarea id="recent" name="a_recent_customers" required></textarea></div>
+</fieldset>
+
+<fieldset>
+  <legend><span>B</span>Turnover</legend>
+  <div class="q"><span class="label">Which band was your turnover in the last full 12 months? <span class="req">*</span></span>
+    <div class="opts">
+      <label><input type="radio" name="b_turnover_band" value="Under £50k" required>Under £50k</label>
+      <label><input type="radio" name="b_turnover_band" value="£50k to £250k">£50k to £250k</label>
+      <label><input type="radio" name="b_turnover_band" value="£250k to £1m">£250k to £1m</label>
+      <label><input type="radio" name="b_turnover_band" value="£1m to £5m">£1m to £5m</label>
+      <label><input type="radio" name="b_turnover_band" value="Over £5m">Over £5m</label>
+    </div></div>
+  <div class="two">
+    <div class="q"><label for="repeat">Share of revenue from repeat customers <span class="req">*</span></label>
+      <select id="repeat" name="b_repeat_share" required><option value="">Choose one</option><option>Under 25%</option><option>25% to 50%</option><option>50% to 75%</option><option>Over 75%</option><option>Not sure</option></select></div>
+    <div class="q"><label for="acc">Who prepares your accounts? <span class="req">*</span></label>
+      <select id="acc" name="b_accounts_by" required><option value="">Choose one</option><option>An accountant</option><option>A bookkeeper</option><option>I do</option><option>No one yet</option></select></div>
+  </div>
+  <div class="q"><label for="filings">Are your company, tax and statutory filings up to date? <span class="req">*</span></label>
+    <select id="filings" name="b_filings_current" required><option value="">Choose one</option><option>Yes</option><option>No</option><option>Not yet due</option></select></div>
+</fieldset>
+
+<fieldset>
+  <legend><span>C</span>Leadership</legend>
+  <div class="q"><label for="c1">Apart from you, who makes decisions in the business? <span class="req">*</span><span class="hint">Their role and what they decide. Write "Only me" if that is the case.</span></label><textarea id="c1" name="c_other_decision_makers" required></textarea></div>
+  <div class="q"><label for="c2">If you were away for two weeks, what would keep running, and who would run it? <span class="req">*</span></label><textarea id="c2" name="c_runs_without_you" required></textarea></div>
+  <div class="q"><span class="label">Who owns each of these areas? <span class="req">*</span></span>
+    <div class="grid-wrap"><table>
+      <thead><tr><th scope="col">Area</th><th scope="col">Me</th><th scope="col">Team member</th><th scope="col">Outsourced</th><th scope="col">No one yet</th></tr></thead>
+      <tbody>
+      <tr><td>Sales</td><td><input type="radio" name="c_owner_sales" value="Me" aria-label="Sales: me" required></td><td><input type="radio" name="c_owner_sales" value="Team member" aria-label="Sales: team member"></td><td><input type="radio" name="c_owner_sales" value="Outsourced" aria-label="Sales: outsourced"></td><td><input type="radio" name="c_owner_sales" value="No one yet" aria-label="Sales: no one yet"></td></tr>
+      <tr><td>Delivery</td><td><input type="radio" name="c_owner_delivery" value="Me" aria-label="Delivery: me" required></td><td><input type="radio" name="c_owner_delivery" value="Team member" aria-label="Delivery: team member"></td><td><input type="radio" name="c_owner_delivery" value="Outsourced" aria-label="Delivery: outsourced"></td><td><input type="radio" name="c_owner_delivery" value="No one yet" aria-label="Delivery: no one yet"></td></tr>
+      <tr><td>Finance</td><td><input type="radio" name="c_owner_finance" value="Me" aria-label="Finance: me" required></td><td><input type="radio" name="c_owner_finance" value="Team member" aria-label="Finance: team member"></td><td><input type="radio" name="c_owner_finance" value="Outsourced" aria-label="Finance: outsourced"></td><td><input type="radio" name="c_owner_finance" value="No one yet" aria-label="Finance: no one yet"></td></tr>
+      </tbody></table></div></div>
+  <div class="two">
+    <div class="q"><label for="c4">How often does your leadership team meet? <span class="req">*</span></label>
+      <select id="c4" name="c_meeting_rhythm" required><option value="">Choose one</option><option>Weekly</option><option>Fortnightly</option><option>Monthly</option><option>Rarely</option><option>We do not meet</option></select></div>
+    <div class="q"><label for="c4b">What did you decide at your last meeting?</label><input id="c4b" name="c_last_decision" type="text"></div>
+  </div>
+</fieldset>
+
+<fieldset>
+  <legend><span>D</span>Growth</legend>
+  <div class="q"><label for="d1">Where do you want the business to be in 12 months? Please use numbers. <span class="req">*</span><span class="hint">For example revenue, customers or team size.</span></label><textarea id="d1" name="d_12_month_target" required></textarea></div>
+  <div class="q"><span class="label">What have you invested in growth in the last six months?</span>
+    <div class="opts">
+      <label><input type="checkbox" name="d_invested_new_hire" value="Yes">A new hire</label>
+      <label><input type="checkbox" name="d_invested_marketing" value="Yes">Marketing spend</label>
+      <label><input type="checkbox" name="d_invested_system" value="Yes">A new system or software</label>
+      <label><input type="checkbox" name="d_invested_training" value="Yes">Training or coaching</label>
+      <label><input type="checkbox" name="d_invested_nothing" value="Yes">Nothing yet</label>
+    </div></div>
+  <div class="q"><label for="d3">What is the main thing stopping you getting there today? <span class="req">*</span></label><textarea id="d3" name="d_main_constraint" required></textarea></div>
+  <div class="q"><label for="d4">What happens if nothing changes in the next 12 months? <span class="req">*</span></label><textarea id="d4" name="d_cost_of_no_change" required></textarea></div>
+  <div class="two">
+    <div class="q"><label for="d5">If you found the right support, when would you start? <span class="req">*</span></label>
+      <select id="d5" name="d_start_when" required><option value="">Choose one</option><option>Within 30 days</option><option>Within 3 months</option><option>Within 6 months</option><option>Not sure yet</option></select></div>
+    <div class="q"><label for="d5b">Who else would need to agree? <span class="req">*</span><span class="hint">Write "No one" if it is your decision alone.</span></label><input id="d5b" name="d_who_must_agree" type="text" required></div>
+  </div>
+</fieldset>
+
+<fieldset>
+  <legend><span>E</span>Kingdom alignment</legend>
+  <div class="q"><span class="label">Are you a Christian-led business? <span class="req">*</span><span class="hint">Owned or led by a Christian who holds real responsibility for its direction.</span></span>
+    <div class="opts">
+      <label><input type="radio" name="e_christian_led" value="Yes" required>Yes</label>
+      <label><input type="radio" name="e_christian_led" value="No">No</label>
+    </div></div>
+  <div class="q"><label for="e1b">If yes, who is that leader, and what is their role?</label><input id="e1b" name="e_christian_leader" type="text"></div>
+  <div class="q"><span class="label">Are you mindful to meet and add value to other Christian businesses? <span class="req">*</span></span>
+    <div class="opts">
+      <label><input type="radio" name="e_adds_value_to_christian_businesses" value="Yes, with a recent example" required>Yes, and I can give a recent example</label>
+      <label><input type="radio" name="e_adds_value_to_christian_businesses" value="Yes, no example yet">Yes, but I have no example yet</label>
+      <label><input type="radio" name="e_adds_value_to_christian_businesses" value="Not currently a priority">Not currently a priority</label>
+    </div></div>
+  <div class="q"><label for="e2b">If you have a recent example, please share it.</label><textarea id="e2b" name="e_example"></textarea></div>
+</fieldset>
+
+<fieldset>
+  <legend><span>F</span>Policies and cover</legend>
+  <p class="intro">Tell us what is in place today. "In progress" is a fine answer.</p>
+  <div class="q"><span class="label">Do you have public liability insurance? <span class="req">*</span></span>
+    <div class="opts">
+      <label><input type="radio" name="f_public_liability" value="Yes" required>Yes</label>
+      <label><input type="radio" name="f_public_liability" value="No">No</label>
+      <label><input type="radio" name="f_public_liability" value="In progress">In progress</label>
+      <label><input type="radio" name="f_public_liability" value="Not applicable">Not applicable to my business</label>
+    </div></div>
+  <div class="q"><span class="label">Do you have a written GDPR (data protection) policy or privacy notice? <span class="req">*</span></span>
+    <div class="opts">
+      <label><input type="radio" name="f_gdpr_policy" value="Yes" required>Yes</label>
+      <label><input type="radio" name="f_gdpr_policy" value="No">No</label>
+      <label><input type="radio" name="f_gdpr_policy" value="In progress">In progress</label>
+    </div></div>
+  <div class="q"><span class="label">Do you have a written refund policy for customers? <span class="req">*</span></span>
+    <div class="opts">
+      <label><input type="radio" name="f_refund_policy" value="Yes" required>Yes</label>
+      <label><input type="radio" name="f_refund_policy" value="No">No</label>
+      <label><input type="radio" name="f_refund_policy" value="In progress">In progress</label>
+      <label><input type="radio" name="f_refund_policy" value="Not applicable">Not applicable to my business</label>
+    </div></div>
+  <div class="q"><label for="f4">Anything you would like to add about these?<span class="hint">For example, your insurer, or where your policies are published.</span></label><input id="f4" name="f_notes" type="text"></div>
+</fieldset>
+
+<fieldset>
+  <legend>Declaration</legend>
+  <div class="q consent"><label style="display:flex;gap:10px;font-weight:400"><input type="checkbox" name="consent_contact" value="Agreed" required style="margin-top:6px;accent-color:#1F2A44">I agree to City on a Hill storing my name, email and phone number to assess this application and contact me about it.</label></div>
+  <div class="q consent"><label style="display:flex;gap:10px;font-weight:400"><input type="checkbox" name="declaration_accurate" value="Confirmed" required style="margin-top:6px;accent-color:#1F2A44">The information I have given is accurate and complete to the best of my knowledge.</label></div>
+  <button type="submit">Send my application</button>
+  <footer>City on a Hill reviews every application personally. Your details are used only for this application. <a href="/data-protection" style="color:#1F2A44">Read our privacy notice</a>.</footer>
+</fieldset>
+</form>
+</main>
+</body>
+</html>

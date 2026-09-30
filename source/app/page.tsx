@@ -396,7 +396,7 @@ export default function Home() {
           <p>City on the Hill is a global ecosystem for people learning, networking and building with purpose.</p>
         </div>
         <div><h3>Explore</h3><a href="/directory">Business directory</a><a href="/events">Events and gatherings</a><a href="#community">Professional community</a><a href="#global">Global markets</a></div>
-        <div><h3>Connect</h3><a href="/join">Join the ecosystem</a><a href="mailto:info@cityonthehillglobal.com">Email us</a><a href="https://www.linkedin.com/company/dominion-mandate/about/">LinkedIn</a><a href="https://www.instagram.com/dominion__mandate/">Instagram</a></div>
+        <div><h3>Connect</h3><a href="/join">Join the ecosystem</a><a href="/apply/">Growth Partner application</a><a href="mailto:info@cityonthehillglobal.com">Email us</a><a href="https://www.linkedin.com/company/dominion-mandate/about/">LinkedIn</a><a href="https://www.instagram.com/dominion__mandate/">Instagram</a></div>
         <div><h3>Legal</h3><a href="/terms">Terms and conditions</a><a href="/refund-policy">Refund policy</a><a href="/data-protection">Data protection policy</a></div>
         <div className="footer-bottom"><span>© 2026 City on the Hill</span><a href="mailto:info@cityonthehillglobal.com">info@cityonthehillglobal.com</a><span>Matthew 5:14</span></div>
       </footer>
