@@ -64,7 +64,7 @@ footer{color:var(--muted);font-size:.85rem;margin-top:28px}
 </header>
 
 <main>
-<form class="wrap" name="growth-partner-application" method="POST" action="/apply/thanks.html" data-netlify="true" netlify-honeypot="bot-field">
+<form id="growth-partner-form" class="wrap" name="growth-partner-application" method="POST" action="/apply/thanks" data-netlify="true" netlify-honeypot="bot-field">
 <input type="hidden" name="form-name" value="growth-partner-application">
 <p class="hidden"><label>Leave this empty <input name="bot-field"></label></p>
 
@@ -221,5 +221,35 @@ footer{color:var(--muted);font-size:.85rem;margin-top:28px}
 </fieldset>
 </form>
 </main>
+<script>
+(function () {
+  var form = document.getElementById('growth-partner-form');
+  if (!form) return;
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    if (!form.reportValidity()) return;
+    var submitButton = form.querySelector('button[type="submit"]');
+    if (submitButton) {
+      submitButton.disabled = true;
+      submitButton.textContent = 'Sending...';
+    }
+    var body = new URLSearchParams(new FormData(form));
+    fetch('/__forms.html', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: body.toString()
+    }).then(function (response) {
+      if (!response.ok) throw new Error('Form submission failed');
+      window.location.href = '/apply/thanks';
+    }).catch(function () {
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.textContent = 'Send my application';
+      }
+      alert('Sorry, we could not send your application. Please try again or email info@cityonthehillglobal.com.');
+    });
+  });
+})();
+</script>
 </body>
 </html>
