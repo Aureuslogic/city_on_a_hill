@@ -12,7 +12,7 @@ export default function EventsClient() {
   const filteredEvents = useMemo(() => {
     const needle = query.toLowerCase().trim();
     return ecosystemEvents.filter((event) => {
-      const searchable = [event.title, event.city, event.market, event.focus, event.audience, event.summary].join(' ').toLowerCase();
+      const searchable = [event.title, event.city, event.market, event.focus, event.audience, event.summary, event.dateLabel, event.host, event.time].join(' ').toLowerCase();
       return (!needle || searchable.includes(needle)) &&
         (format === 'All formats' || event.format === format) &&
         (market === 'All countries and regions' || event.market === market) &&
@@ -73,18 +73,24 @@ export default function EventsClient() {
           {filteredEvents.map((event) => (
             <article className="event-card" key={event.slug}>
               <div className="event-card-image">
-                <img src={event.image} alt={`${event.title} programme preview`} />
-                <span>Programme preview</span>
+                <img src={event.image} alt="" />
+                <span>{event.dateLabel ?? 'Programme preview'}</span>
               </div>
               <div className="event-card-body">
-                <div className="event-card-meta"><span>{event.format}</span><span>{event.city} · {event.market}</span></div>
+                <div className="event-card-meta"><span>{event.format}</span><span>{event.time ? `${event.time} · ` : ''}{event.city}</span></div>
                 <p className="kicker">{event.focus}</p>
                 <h2>{event.title}</h2>
                 <p>{event.summary}</p>
-                <small>For {event.audience}</small>
-                <a href={`mailto:info@cityonthehillglobal.com?subject=${encodeURIComponent(`Register interest: ${event.title}`)}`}>
-                  Register interest <span>→</span>
-                </a>
+                <small>{event.host ? event.host : `For ${event.audience}`}</small>
+                {event.registrationUrl ? (
+                  <a href={event.registrationUrl}>Join <span>→</span></a>
+                ) : event.dateLabel ? (
+                  <small>Join link coming</small>
+                ) : (
+                  <a href={`mailto:info@cityonthehillglobal.com?subject=${encodeURIComponent(`Register interest: ${event.title}`)}`}>
+                    Register interest <span>→</span>
+                  </a>
+                )}
               </div>
             </article>
           ))}

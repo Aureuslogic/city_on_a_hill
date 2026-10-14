@@ -71,6 +71,32 @@ export type Business = {
 // are generated automatically from this single collection.
 export const businesses: Business[] = [
   {
+    slug: 'akd-solutions',
+    name: 'AKD Solutions',
+    category: 'Education & training',
+    location: 'United Kingdom',
+    market: 'United Kingdom',
+    countryCode: 'GB',
+    serves: 'Leaders and organisations ready for meaningful change',
+    summary: 'Stimulating brilliance. Learning, research and consultancy that helps organisations name the change they need and build it to last.',
+    description: [
+      'Every organisation already holds the brilliance it needs. AKD Solutions exists to stimulate it.',
+    ],
+    benefits: ['People leave knowing their why and their how', 'Change that lasts beyond the engagement', 'Impact that can be evidenced'],
+    services: ['Learning and development', 'Research', 'Consultancy'],
+    keywords: ['AKD', 'learning', 'leadership', 'transformation', 'consultancy'],
+    website: 'mailto:info@cityonthehillglobal.com?subject=Start a conversation with AKD Solutions',
+    ctaLabel: 'Start the conversation',
+    verified: false,
+    featured: true,
+    isDemo: false,
+    accent: 'navy',
+    profileType: 'Businesses',
+    languages: ['English'],
+    delivery: 'Online & in person',
+    media: { kind: 'image', label: 'AKD Solutions learning partnership', src: '/directory/consulting-team.png' },
+  },
+  {
     slug: 'strategy-consulting-showcase',
     name: 'Strategy & Consulting Showcase',
     category: 'Strategy & consulting',

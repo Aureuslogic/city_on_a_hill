@@ -17,40 +17,70 @@ const pathways: Array<{
   label: string;
   name: string;
   price: string;
+  priceNote: string;
   description: string;
+  pillars: string;
   features: string[];
   cta: string;
-  subject?: string;
-  href?: string;
+  href: string;
   featured?: boolean;
 }> = [
   {
-    label: 'Trust and visibility',
-    name: 'Verified profile',
-    price: 'By application',
-    description: 'A stronger trust layer for established organisations ready to provide evidence and complete review.',
-    features: ['Shareable directory profile', 'Verification review and trust badge', 'Expanded media and benefit sections', 'Eligibility for selected introductions'],
-    cta: 'Apply for verification',
-    subject: 'Verified profile application',
+    label: 'Start growing',
+    name: 'Spark',
+    price: '£588 per year',
+    priceNote: 'or £150 per quarter · Inclusive of VAT',
+    description: 'Develop, connect and be found.',
+    pillars: 'Development · Connectivity · Visibility',
+    features: [
+      '1 x business audit and coaching session (45 mins)',
+      '1 x monthly masterclass (90 mins)',
+      '2 x monthly webinars (1 hour each)',
+      'Business-based Bible Gyms',
+      'Directory page',
+    ],
+    cta: 'Become a partner',
+    href: '/verification',
+  },
+  {
+    label: 'More time in community',
+    name: 'Lamp',
+    price: '£1,170 per year',
+    priceNote: 'or £300 per quarter · Inclusive of VAT',
+    description: 'Everything in Spark, with more time in community.',
+    pillars: 'Development · Connectivity · Visibility',
+    features: [
+      '1 x business audit and coaching session (45 mins)',
+      '1 x monthly masterclass (90 mins)',
+      '2 x monthly webinars (1 hour each)',
+      'Business-based Bible Gyms',
+      '2 x social gatherings per year',
+      'Directory page',
+    ],
+    cta: 'Become a partner',
+    href: '/verification',
+  },
+  {
+    label: 'Full experience',
+    name: 'Beacon',
+    price: '£2,340 per year',
+    priceNote: 'or £660 per quarter · Inclusive of VAT',
+    description: 'The complete City: intensive growth and premium visibility.',
+    pillars: 'Development · Connectivity · Visibility',
+    features: [
+      '1 x business audit',
+      '4 x coaching sessions (60 mins)',
+      '1 x monthly masterclass (90 mins)',
+      '2 x monthly webinars (1 hour each)',
+      '2 x face-to-face intensive workshops per year',
+      'Business-based Bible Gyms',
+      '2 x social gatherings per year',
+      '1 x private dinner (with guests)',
+      'Enhanced directory page',
+    ],
+    cta: 'Become a partner',
+    href: '/verification',
     featured: true,
-  },
-  {
-    label: 'Strategic collaboration',
-    name: 'Featured partner',
-    price: 'Partner programme',
-    description: 'For organisations contributing events, learning, opportunities or infrastructure to the wider ecosystem.',
-    features: ['Everything in Verified profile', 'Featured marketplace placement', 'Event and programme collaboration', 'Priority ecosystem introductions'],
-    cta: 'Discuss partnership',
-    subject: 'Featured partner enquiry',
-  },
-  {
-    label: 'Growth support',
-    name: 'Growth Partner',
-    price: 'By application',
-    description: 'For established, Christian-led businesses ready to grow with structured support from City on a Hill.',
-    features: ['Personal application review', 'Qualification against growth criteria', 'Direct contact from the City on a Hill team', 'Pathway into deeper partnership'],
-    cta: 'Apply as a Growth Partner',
-    href: '/apply/',
   },
 ];
 
@@ -88,7 +118,7 @@ export default function JoinPage() {
             searchable international ecosystem built around faith, excellence, trust and meaningful impact.
           </p>
           <div className="hero-actions">
-            <a className="button button-gold" href="#pathways">Choose a pathway</a>
+            <a className="button button-gold" href="#pathways">Become a partner</a>
             <a className="text-link" href="/directory">Explore the directory</a>
           </div>
         </div>
@@ -96,29 +126,47 @@ export default function JoinPage() {
 
       <section className="join-main" id="pathways" aria-labelledby="join-heading">
         <div className="directory-heading">
-          <div><p className="kicker">Membership and visibility</p><h2 id="join-heading">A clear place to begin, and room to grow</h2></div>
-          <p>Apply for a verified profile, then explore deeper partnership as your role in the ecosystem grows.</p>
+          <div><p className="kicker">Membership</p><h2 id="join-heading">Every light has its place. Choose yours.</h2></div>
+          <p>Three ways to develop, connect and be seen. Verification comes first, at every tier.</p>
         </div>
         <div className="join-tier-grid">
           {pathways.map((pathway) => (
             <article className={pathway.featured ? 'join-tier is-featured' : 'join-tier'} key={pathway.name}>
               <span>{pathway.label}</span>
               <h2>{pathway.name}</h2>
-              <p className="join-price">{pathway.price}</p>
+              <p className="join-price">{pathway.price}<small>{pathway.priceNote}</small></p>
               <p>{pathway.description}</p>
+              <p className="join-pillars">{pathway.pillars}</p>
               <ul>{pathway.features.map((feature) => <li key={feature}>✓ {feature}</li>)}</ul>
-              <a
-                className={pathway.featured ? 'button button-gold' : 'button button-outline'}
-                href={
-                  pathway.href
-                    ?? `mailto:info@cityonthehillglobal.com?subject=${encodeURIComponent(pathway.subject ?? '')}`
-                }
-              >
+              <a className={pathway.featured ? 'button button-gold' : 'button button-outline'} href={pathway.href}>
                 {pathway.cta}
               </a>
             </article>
           ))}
         </div>
+      </section>
+
+      <section className="membership-notes" aria-label="Membership conditions">
+        <article className="membership-note">
+          <p className="kicker">Verification required for every member</p>
+          <h2>Standards from the very start</h2>
+          <p>
+            Before joining at any tier, every business completes City on the Hill&apos;s verification process,
+            so professional standards and quality are embedded from the very start.
+          </p>
+          <a className="button button-gold" href="/verification">Start verification</a>
+        </article>
+        <article className="membership-note">
+          <p className="kicker">Shared success: partnership fee</p>
+          <h2>2.5% when the City brings a customer</h2>
+          <p>
+            When the City brings you a customer, via your City directory page link or a City code, a 2.5% fee
+            applies to their purchases for the first 12 months. Self-declared on trust; collected monthly, or
+            quarterly for balances under £25.
+          </p>
+          <p>Full partnership fee terms are set out in the membership agreement.</p>
+          <a className="button button-outline" href="/verification">Accept the invitation</a>
+        </article>
       </section>
 
       <section className="join-faq section" aria-labelledby="join-faq-heading">

@@ -123,7 +123,7 @@ export default function Home() {
             <a href="#community">Ecosystem</a>
             <a href="/join">Join</a>
           </div>
-          <a className="button button-light nav-cta" href="/join">
+          <a className="button button-light nav-cta" href="/verification">
             Get your business verified
           </a>
         </nav>
@@ -146,7 +146,7 @@ export default function Home() {
             </div>
             <a
               className="ecosystem-invite"
-              href="mailto:info@cityonthehillglobal.com?subject=Join the City on the Hill ecosystem"
+              href="/verification"
             >
               <span className="ecosystem-symbol" aria-hidden="true">✦</span>
               <span><b>Join our Ecosystem</b><small>Learn and Network Globally</small></span>
@@ -196,6 +196,53 @@ export default function Home() {
         <a href="/events"><b>Gather</b><span>Events, roundtables and learning</span><i>02</i></a>
         <a href="#community"><b>Connect</b><span>Meet faith-driven professionals</span><i>03</i></a>
         <a href="/join"><b>Join</b><span>Showcase your work and grow</span><i>04</i></a>
+      </section>
+
+      <section className="section growth-section" id="businesses">
+        <div className="growth-top">
+          <div>
+            <p className="kicker">Our approach</p>
+            <h2>How we serve you.<br /><em>Grounded in His Word.</em></h2>
+          </div>
+          <p>
+            We support your development. We increase your connectivity. We help your visibility.
+            Everything a City on the Hill partner receives flows through three channels. Each one is
+            practical and measurable, and rooted in God and His Word.
+          </p>
+        </div>
+        <div className="growth-grid">
+          <article className="growth-feature growth-feature-main">
+            <span>01 Development</span>
+            <h3>Building your skills and competencies.</h3>
+            <p>Growing you as a leader and your business as an enterprise, totally grounded in God and His Word.</p>
+            <ul>
+              <li>Business audit and coaching</li>
+              <li>Monthly masterclasses</li>
+              <li>Webinars</li>
+              <li>Intensive workshops</li>
+            </ul>
+          </article>
+          <article className="growth-feature">
+            <span>02 Connectivity</span>
+            <h3>Creating spaces for you to connect.</h3>
+            <p>Meaningful relationships with other partners, for fellowship, collaboration and shared opportunity.</p>
+            <ul>
+              <li>Business-based Bible Gyms</li>
+              <li>Social gatherings</li>
+              <li>Private dinners with guests</li>
+            </ul>
+          </article>
+          <article className="growth-feature growth-feature-blue">
+            <span>03 Visibility</span>
+            <h3>Helping people find and buy from you.</h3>
+            <p>Spaces where people can learn about your product or service, and do business with you.</p>
+            <ul>
+              <li>Your directory page</li>
+              <li>Enhanced directory page</li>
+            </ul>
+            <a href="/verification">Get verified <b>→</b></a>
+          </article>
+        </div>
       </section>
 
       <section className="section directory-section" id="directory">
@@ -251,7 +298,7 @@ export default function Home() {
               <li><span>02</span><div><b>Founder roundtables</b><p>for honest thinking, prayer and peer support</p></div></li>
               <li><span>03</span><div><b>Events and introductions</b><p>that turn shared values into real opportunity</p></div></li>
           </ul>
-          <a className="button button-gold" href="mailto:info@cityonthehillglobal.com?subject=Join the City on the Hill ecosystem">Join our Ecosystem</a>
+          <a className="button button-gold" href="/verification">Join our Ecosystem</a>
         </div>
       </section>
 
@@ -281,40 +328,6 @@ export default function Home() {
             <p><b>Different callings.</b> Shared faith. Greater Kingdom impact.</p>
             <a className="button button-gold" href="#join">Find your place in the city</a>
           </div>
-        </div>
-      </section>
-
-      <section className="section growth-section" id="businesses">
-        <div className="growth-top">
-          <div>
-            <p className="kicker">For Christian entrepreneurs</p>
-            <h2>More than a listing.<br /><em>A place to build.</em></h2>
-          </div>
-          <p>
-            Get found by the right people, strengthen the business behind your profile and prepare for
-            bigger opportunities, with practical, values-led support for every stage of growth.
-          </p>
-        </div>
-        <div className="growth-grid">
-          <article className="growth-feature growth-feature-main">
-            <span>Visibility</span>
-            <h3>Be easier to discover, and easier to trust.</h3>
-            <p>
-              Present your offer clearly through a verified profile built for customer searches,
-              supplier discovery and meaningful referrals.
-            </p>
-            <a href="#join">Apply for verification <b>→</b></a>
-          </article>
-          <article className="growth-feature">
-            <span>Capability</span>
-            <h3>Build with confidence.</h3>
-            <p>Access coaching, AI capability and practical development to strengthen how you lead and deliver.</p>
-          </article>
-          <article className="growth-feature growth-feature-blue">
-            <span>Opportunity</span>
-            <h3>Prepare for bigger rooms.</h3>
-            <p>Build the credibility, relationships and readiness needed for corporate and collaborative work.</p>
-          </article>
         </div>
       </section>
 
@@ -383,8 +396,8 @@ export default function Home() {
         <p>Find the right business, join our ecosystem to learn and network globally, or bring your own work into the city.</p>
         <div className="join-actions">
           <a className="button button-gold" href="/directory">Explore the directory</a>
-          <a className="button button-outline" href="mailto:info@cityonthehillglobal.com?subject=Join the City on the Hill ecosystem">Join our Ecosystem</a>
-          <a className="button button-outline" href="mailto:info@cityonthehillglobal.com?subject=Business verification">Get my business verified</a>
+          <a className="button button-outline" href="/verification">Join our Ecosystem</a>
+          <a className="button button-outline" href="/verification">Get my business verified</a>
         </div>
       </section>
 

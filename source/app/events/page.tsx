@@ -46,9 +46,9 @@ export default function EventsPage() {
             creatives and emerging leaders, locally, internationally and online.
           </p>
           <div className="directory-capacity" aria-label="Event programme features">
-            <span><b>03</b> gathering formats</span>
-            <span><b>06</b> programme previews</span>
-            <span><b>Global</b> participation</span>
+            <span><b>04</b> confirmed sessions</span>
+            <span><b>Oct-Nov</b> programme</span>
+            <span><b>More</b> webinars to follow</span>
           </div>
         </div>
       </section>
@@ -59,9 +59,8 @@ export default function EventsPage() {
           <div className="answer-copy compact-answer">
             <h3>How can I meet faith-driven entrepreneurs and professionals?</h3>
             <p>
-              Use the filters to explore networking breakfasts, international roundtables, specialist circles
-              and young-leader gatherings. These previews demonstrate the programme structure; confirmed dates
-              and booking links will appear as each event opens.
+              The next confirmed sessions are listed first. Further webinars and guests are still to be confirmed.
+              Join links will be added as soon as they are ready.
             </p>
           </div>
         </div>

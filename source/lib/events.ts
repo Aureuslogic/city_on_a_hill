@@ -1,5 +1,5 @@
 export const eventFormats = ['In person', 'Virtual', 'Hybrid'] as const;
-export const eventFocuses = ['Business & leadership', 'Investment', 'Creative industries', 'Young professionals', 'Community impact'] as const;
+export const eventFocuses = ['Development', 'Connectivity', 'Business & leadership', 'Investment', 'Creative industries', 'Young professionals', 'Community impact'] as const;
 
 export type EcosystemEvent = {
   slug: string;
@@ -11,11 +11,71 @@ export type EcosystemEvent = {
   audience: string;
   summary: string;
   image: string;
+  dateLabel?: string;
+  time?: string;
+  host?: string;
+  registrationUrl?: string;
 };
 
 // Programme previews demonstrate the event-discovery system without publishing
 // invented dates. Replace or extend these with confirmed event records.
 export const ecosystemEvents: EcosystemEvent[] = [
+  {
+    slug: 'fulfilling-your-dominion-mandate',
+    title: 'Masterclass: Fulfilling Your Dominion Mandate',
+    city: 'Online',
+    market: 'United Kingdom',
+    format: 'Virtual',
+    focus: 'Development',
+    audience: 'City on the Hill partners',
+    summary: 'A Saturday masterclass with Akin Thomas of Dominion Mandate.',
+    image: '/directory/consulting-team.png',
+    dateLabel: 'Saturday 31 October',
+    time: '8:00-9:30am',
+    host: 'Akin Thomas, Dominion Mandate',
+  },
+  {
+    slug: 'ai-and-social-media',
+    title: 'Masterclass: AI and Social Media',
+    city: 'Online',
+    market: 'United Kingdom',
+    format: 'Virtual',
+    focus: 'Development',
+    audience: 'City on the Hill partners',
+    summary: 'A Saturday masterclass with Sam Onigbanjo of AI Academy for Beginners.',
+    image: '/directory/market-professionals.png',
+    dateLabel: 'Saturday 14 November',
+    time: '8:00-9:30am',
+    host: 'Sam Onigbanjo, AI Academy for Beginners',
+  },
+  {
+    slug: 'stewarding-your-finances',
+    title: 'Stewarding Your Finances',
+    city: 'Online',
+    market: 'United Kingdom',
+    format: 'Virtual',
+    focus: 'Development',
+    audience: 'City on the Hill partners',
+    summary: 'A Saturday session with Rhianne Forrest of Forrest Finance.',
+    image: '/directory/banking-and-founder.png',
+    dateLabel: 'Saturday 21 November',
+    time: '8:00-9:00am',
+    host: 'Rhianne Forrest, Forrest Finance',
+  },
+  {
+    slug: 'city-bible-gym-28-november',
+    title: 'City Bible Gym',
+    city: 'Online',
+    market: 'United Kingdom',
+    format: 'Virtual',
+    focus: 'Connectivity',
+    audience: 'City on the Hill partners',
+    summary: 'Business-based study and fellowship.',
+    image: '/directory/young-diverse-leaders.png',
+    dateLabel: 'Saturday 28 November',
+    time: '8:00-9:00am',
+    host: 'City on the Hill',
+  },
   {
     slug: 'london-marketplace-leaders-breakfast',
     title: 'Marketplace Leaders Breakfast',

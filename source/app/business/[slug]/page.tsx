@@ -10,7 +10,9 @@ type BusinessPageProps = {
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return businesses.map((business) => ({ slug: business.slug }));
+  return businesses
+    .filter((business) => business.slug !== 'akd-solutions')
+    .map((business) => ({ slug: business.slug }));
 }
 
 export async function generateMetadata({ params }: BusinessPageProps): Promise<Metadata> {
