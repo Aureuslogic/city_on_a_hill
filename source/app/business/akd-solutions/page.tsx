@@ -43,10 +43,10 @@ export default function AkdSolutionsPage() {
                 This is an opportunity to disrupt convention and let incredible possibilities emerge. Seize it.
               </p>
               <div className="profile-actions">
-                <a className="button button-gold" href="mailto:info@cityonthehillglobal.com?subject=Start a conversation with AKD Solutions">
+                <a className="button button-gold" href="mailto:contact@akdsolutions.com?subject=Starting%20a%20conversation%20with%20AKD%20Solutions">
                   Start the conversation
                 </a>
-                <a className="text-link" href="/join">Partner with us</a>
+                <a className="text-link" href="https://www.akdsolutions.com" target="_blank" rel="noopener noreferrer">Find out more</a>
               </div>
             </div>
             <div className="akd-video" aria-label="Brand video placeholder">
@@ -128,10 +128,10 @@ export default function AkdSolutionsPage() {
           <p>
             This is an opportunity to disrupt, break convention, and allow incredible opportunities to emerge.
           </p>
-          <a className="button button-gold" href="mailto:info@cityonthehillglobal.com?subject=Start a conversation with AKD Solutions">
+          <a className="button button-gold" href="mailto:contact@akdsolutions.com?subject=Starting%20a%20conversation%20with%20AKD%20Solutions">
             Start the conversation
           </a>
-          <a className="button button-outline" href="/join">Partner with us</a>
+          <a className="button button-outline" href="https://www.akdsolutions.com" target="_blank" rel="noopener noreferrer">Find out more</a>
         </aside>
       </section>
       <SiteFooter />
