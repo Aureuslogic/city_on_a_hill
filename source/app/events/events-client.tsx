@@ -83,7 +83,7 @@ export default function EventsClient() {
                 <p>{event.summary}</p>
                 <small>{event.host ? event.host : `For ${event.audience}`}</small>
                 {event.registrationUrl ? (
-                  <a href={event.registrationUrl}>Join <span>→</span></a>
+                  <a href={event.registrationUrl} target="_blank" rel="noopener noreferrer">Join <span>→</span></a>
                 ) : event.dateLabel ? (
                   <small>Join link coming</small>
                 ) : (

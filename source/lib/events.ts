@@ -33,6 +33,7 @@ export const ecosystemEvents: EcosystemEvent[] = [
     dateLabel: 'Saturday 31 October',
     time: '8:00-9:30am',
     host: 'Akin Thomas, Dominion Mandate',
+    registrationUrl: 'https://zoom.us/meeting/register/Ponvg190RtKF1qZierW4Wg',
   },
   {
     slug: 'ai-and-social-media',
@@ -47,6 +48,7 @@ export const ecosystemEvents: EcosystemEvent[] = [
     dateLabel: 'Saturday 14 November',
     time: '8:00-9:30am',
     host: 'Sam Onigbanjo, AI Academy for Beginners',
+    registrationUrl: 'https://zoom.us/meeting/register/hauVyRhBS4aXnLbYf_ajNA',
   },
   {
     slug: 'stewarding-your-finances',
@@ -61,6 +63,7 @@ export const ecosystemEvents: EcosystemEvent[] = [
     dateLabel: 'Saturday 21 November',
     time: '8:00-9:00am',
     host: 'Rhianne Forrest, Forrest Finance',
+    registrationUrl: 'https://zoom.us/meeting/register/hea-BxbUSEaKi8WgxZ_fzw',
   },
   {
     slug: 'city-bible-gym-28-november',
